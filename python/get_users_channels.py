@@ -22,7 +22,11 @@ def getUsers(scenario, no_active_users):
     # Randomly obtain of group of UEs
     no_bs, no_ue = pathloss.shape
     ue_indices = range(0,no_ue)
-    active_ue_indices = np.random.choice(ue_indices, no_active_users)
+
+    if no_active_users <= no_ue:
+        active_ue_indices = np.random.choice(ue_indices, no_active_users)
+    else:
+        raise ValueError(f"Number of active users: {no_active_users} exceed maximum allowable of {no_ue}" )
 
     # Process pathloss, positions and correlation coefficients 
     # to select only subset of users
