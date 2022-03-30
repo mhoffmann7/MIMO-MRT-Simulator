@@ -16,3 +16,6 @@ tx_power_dbm = np.array([46, 30, 30, 30, 30, 30]) # dBm
 
 # Thermal noise power
 noise_pwr_dbm = -174 # dBm/Hz
+
+# Bandwidth 
+bandwidth = 10 # MHz
