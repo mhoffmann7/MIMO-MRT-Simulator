@@ -4,7 +4,6 @@ import scipy
 import numpy as np
 from matplotlib.patches import Rectangle
 from params import BSs, B, R
-from dpb import setActiveBSsConfiguration
 
 def ecdf(a):
     x, counts = np.unique(a, return_counts=True)
